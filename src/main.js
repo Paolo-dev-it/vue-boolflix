@@ -18,6 +18,9 @@ import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 /* add icons to the library */
 library.add(faUserSecret);
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+
 new Vue({
   render: (h) => h(App),
 }).$mount("#app");
