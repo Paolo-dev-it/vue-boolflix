@@ -1,8 +1,7 @@
 <template>
   <div>
-    <FilmsComp :movieProps="propsMovies" />
-    <SeriesComp :seriesProps="propsTv" />
-    <h3>{{ propsFilm.genre }}</h3>
+    <FilmsComp :secPropsFilm="propsFilm" />
+    <SeriesComp :secpropsSerie="propsSerie" />
   </div>
 </template>
 
@@ -12,19 +11,15 @@ import SeriesComp from "./SeriesComp.vue";
 
 export default {
   name: "MainComp",
-  data() {
-    return {
-      propsMovies: this.propsFilm,
-      propsTv: this.propsSeries,
-    };
-  },
-  props: {
-    propsFilm: Array,
-    propsSeries: Array,
-  },
+
   components: {
     FilmsComp,
     SeriesComp,
+  },
+
+  props: {
+    propsFilm: Array,
+    propsSerie: Array,
   },
 };
 </script>

@@ -4,9 +4,8 @@
 
 <script>
 export default {
-  name: "SeriesComp",
   props: {
-    seriesProps: Array,
+    secpropsSerie: Array,
   },
 };
 </script>

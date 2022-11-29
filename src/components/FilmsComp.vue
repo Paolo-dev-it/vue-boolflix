@@ -1,19 +1,22 @@
 <template>
   <div>
-    <h2>Film</h2>
     <div>
-      <div class="container-big">
-        <div class="container"></div>
-      </div>
+      <CardComp
+        v-for="(element, index) in propsFilm"
+        :key="index"
+        :cardProps="element"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import CardComp from "./CardComp.vue";
 export default {
   name: "FilmsComp",
+  components: CardComp,
   props: {
-    movieProps: Array,
+    propsFilm: Array,
   },
 };
 </script>

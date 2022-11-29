@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeaderComp @nomeEmit="getFilms" />
-    <MainComp :propsFilm="dataArrayFilms" :propsSeries="dataArraySeries" />
+    <MainComp :propsFilm="dataArrayFilms" :propsSerie="dataArraySeries" />
   </div>
 </template>
 
