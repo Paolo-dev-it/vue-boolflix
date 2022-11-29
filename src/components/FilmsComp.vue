@@ -2,7 +2,7 @@
   <div>
     <div>
       <CardComp
-        v-for="(element, index) in propsFilm"
+        v-for="(element, index) in secPropsFilm"
         :key="index"
         :cardProps="element"
       />
@@ -14,9 +14,13 @@
 import CardComp from "./CardComp.vue";
 export default {
   name: "FilmsComp",
-  components: CardComp,
+
+  components: {
+    CardComp,
+  },
+
   props: {
-    propsFilm: Array,
+    secPropsFilm: Array,
   },
 };
 </script>
