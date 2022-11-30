@@ -1,7 +1,7 @@
 <template>
-  <div class="container w-75">
+  <div class="container ">
     <h2 class="text-white">Serie TV</h2>
-    <div class="d-flex flex-wrap justify-content-start h-100">
+    <div class="d-flex flex-wrap justify-content-between ">
       <CardCompSeries v-for="(element, index) in secpropsSerie" :key="index" :cardProps="element" />
     </div>
   </div>

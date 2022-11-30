@@ -13,10 +13,6 @@ import MainComp from "./components/MainComp.vue";
 import axios from "axios";
 
 
-
-
-
-
 export default {
   name: "App",
   components: {

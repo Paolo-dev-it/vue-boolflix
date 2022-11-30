@@ -1,8 +1,7 @@
 <template>
-  <div class="container w-75 ">
+  <div class="container  ">
     <h2 class="text-white">Films</h2>
-    <div class=" d-flex flex-wrap justify-content-start h-100">
-
+    <div class=" d-flex flex-wrap justify-content-between ">
       <CardCompFilms v-for="(element, index) in secPropsFilm" :key="index" :cardProps="element" />
     </div>
   </div>
