@@ -8,9 +8,9 @@
                     <div class="card-body">
                         <h4 class="card-title">{{ cardProps.name }}</h4>
                         <h5>{{ cardProps.original_name }}</h5>
-                        <p class="card-text text-uppercase">
-                            <span :class="`fi fi-${cardProps.original_language}`"></span>
-                        </p>
+                        <div>
+                            <img class="img-def" :src="require(`../assets/Flags/${cardProps.original_language}.png`)" />
+                        </div>
                         <p><span>Vote: </span>{{ cardProps.vote_average }}</p>
                     </div>
                 </div>
@@ -29,5 +29,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.img-def {
+    width: 20px;
+    height: 15px;
+}
 </style>
