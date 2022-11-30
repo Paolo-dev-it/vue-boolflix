@@ -8,14 +8,17 @@
           <div class="card-body">
             <h4 class="card-title">{{ cardProps.title }}</h4>
             <h5>{{ cardProps.original_title }}</h5>
-            <div>
-              <img class="img-def" :src="require(`../assets/Flags/${cardProps.original_language}.png`)" />
+            <div class="d-flex justify-content-between">
+              <div>
+                <img class="img-def" :src="require(`../assets/Flags/${cardProps.original_language}.png`)" />
+              </div>
+              <p class="card-text ">Voto:
+                <font-awesome-icon class="text-warning" icon="fa-solid fa-star" v-for="(index) in this.vote"
+                  :key='index' />
+                <font-awesome-icon icon="fa-regular fa-star" v-for="(index) in 5 - this.vote" :key='index' />
+              </p>
             </div>
-            <p class="card-text ">Voto:
-              <font-awesome-icon class="text-warning" icon="fa-solid fa-star" v-for="(index) in this.vote"
-                :key='index' />
-              <font-awesome-icon icon="fa-regular fa-star" v-for="(index) in 5 - this.vote" :key='index' />
-            </p>
+
           </div>
         </div>
       </div>
