@@ -9,7 +9,7 @@
                                 <div class="card-body p-0 b-0 m-0 text-left">
                                     <img class="background img-fluid"
                                         :src="`http://image.tmdb.org/t/p/w342/${cardProps.backdrop_path}`"
-                                        alt="card image">
+                                        alt="Image not available">
                                     <h5 class="card-title p-2">{{ cardProps.name }}</h5>
                                     <div class="p-2">
                                         <span>Lingua: </span>
@@ -113,10 +113,13 @@ export default {
     position: relative;
     z-index: 2;
     margin-bottom: 30px;
+    height: 300px;
 }
 
 .backside {
     position: absolute;
+    height: 300px;
+    overflow: auto;
     top: 0;
     left: 0;
     background: white;
@@ -150,15 +153,8 @@ export default {
 
 .frontside .card,
 .backside .card {
-    min-height: 312px;
+    min-height: 300px;
 }
-
-.backside .card a {
-    font-size: 18px;
-    color: #007b5e !important;
-}
-
-
 
 .frontside .card .card-body .background {
     width: 100%;
