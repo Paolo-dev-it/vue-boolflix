@@ -21,6 +21,8 @@ library.add(faUserSecret);
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+
 new Vue({
   render: (h) => h(App),
 }).$mount("#app");

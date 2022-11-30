@@ -12,6 +12,8 @@ import MainComp from "./components/MainComp.vue";
 /* Importo Axios */
 import axios from "axios";
 
+
+
 export default {
   name: "App",
   components: {
@@ -57,5 +59,11 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#app {
+  background-color: black;
+  height: 100vh;
+  overflow: auto;
 }
 </style>
