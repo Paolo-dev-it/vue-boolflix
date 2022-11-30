@@ -11,7 +11,7 @@
                         <div>
                             <img class="img-def" :src="require(`../assets/Flags/${cardProps.original_language}.png`)" />
                         </div>
-                        <p><span>Vote: </span>{{ cardProps.vote_average }}</p>
+                        <p><span>Vote: </span>{{ vote }}</p>
                     </div>
                 </div>
             </div>
@@ -24,6 +24,11 @@ export default {
     name: "CardCompSeries",
     props: {
         cardProps: Object,
+    },
+    data() {
+        return {
+            vote: Math.ceil((this.cardProps.vote_average / 2))
+        }
     },
 };
 </script>
