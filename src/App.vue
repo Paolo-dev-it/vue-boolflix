@@ -12,7 +12,7 @@ import MainComp from "./components/MainComp.vue";
 /* Importo Axios */
 import axios from "axios";
 
-/* import specific icons */
+
 
 
 

@@ -11,7 +11,12 @@
                         <div>
                             <img class="img-def" :src="require(`../assets/Flags/${cardProps.original_language}.png`)" />
                         </div>
-                        <p><span>Vote: </span>{{ vote }}</p>
+                        <p class="card-text">Voto:
+                            <font-awesome-icon class="text-warning" icon="fa-solid fa-star"
+                                v-for="(i, index) in this.vote" :key='index' />
+                            <font-awesome-icon icon="fa-regular fa-star" v-for="(i, index) in 5 - this.vote"
+                                :key='index' />
+                        </p>
                     </div>
                 </div>
             </div>

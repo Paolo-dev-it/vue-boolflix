@@ -25,7 +25,7 @@
               placeholder="Search" aria-label="Example text with button addon" aria-describedby="button-addon1" />
             <button class="btn btn-outline-light" @click="$emit('nomeEmit', testoInput)" type="button"
               id="button-addon1">
-              Search
+              <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
             </button>
           </div>
         </div>
