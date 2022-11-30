@@ -4,13 +4,13 @@
             <div class="container ">
                 <div class="image-flip " ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
-                        <div class="frontside ">
-                            <div class="card  ">
-                                <div class="card-body  p-0 b-0 m-0 text-left">
+                        <div class="frontside">
+                            <div class="card ">
+                                <div class="card-body p-0 b-0 m-0 text-left">
                                     <img class="background img-fluid"
                                         :src="`http://image.tmdb.org/t/p/w342/${cardProps.backdrop_path}`"
                                         alt="card image">
-                                    <h5 class="card-title p-2">{{ cardProps.title }}</h5>
+                                    <h5 class="card-title p-2">{{ cardProps.name }}</h5>
                                     <div class="p-2">
                                         <span>Lingua: </span>
                                         <img class="img-def"
@@ -18,8 +18,8 @@
                                     </div>
                                     <p class="card-text p-2">Voto:
                                         <font-awesome-icon class="text-warning" icon="fa-solid fa-star"
-                                            v-for="(i, index) in this.vote" :key='index' />
-                                        <font-awesome-icon icon="fa-regular fa-star" v-for="(i, index) in 5 - this.vote"
+                                            v-for="(index) in this.vote" :key='index' />
+                                        <font-awesome-icon icon="fa-regular fa-star" v-for="( index) in 5 - this.vote"
                                             :key='index' />
                                     </p>
                                 </div>
@@ -28,7 +28,7 @@
                         <div class="backside">
                             <div class="card ">
                                 <div class="card-body text-left ">
-                                    <h4 class="card-title">{{ cardProps.original_title }}</h4>
+                                    <h4 class="card-title">{{ cardProps.original_name }}</h4>
                                     <p class="card-text">{{ cardProps.overview }}</p>
                                 </div>
                             </div>
@@ -38,6 +38,7 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -62,12 +63,8 @@ export default {
 
 .card {
     width: 300px;
-    height: 100%;
     border-radius: 4px;
-    background-color: white;
-    color: black;
-
-
+    background: #fff;
     box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
     transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
     cursor: pointer;
@@ -78,7 +75,9 @@ export default {
     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
 
-
+#team {
+    background: #eee !important;
+}
 
 .image-flip:hover .backside,
 .image-flip.hover .backside {
@@ -120,9 +119,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
-    color: white;
-    overflow: auto;
+    background: white;
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
@@ -150,6 +147,18 @@ export default {
     transition: 1s;
     transform-style: preserve-3d;
 }
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+
 
 .frontside .card .card-body .background {
     width: 100%;

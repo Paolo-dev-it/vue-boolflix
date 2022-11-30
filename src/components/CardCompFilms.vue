@@ -24,7 +24,7 @@
             </div>
             <div class="backside">
               <div class="card ">
-                <div class="card-body text-left ">
+                <div class="card-body text-left">
                   <h4 class="card-title">{{ cardProps.original_title }}</h4>
                   <p class="card-text">{{ cardProps.overview }}</p>
                 </div>

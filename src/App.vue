@@ -28,7 +28,7 @@ export default {
   },
 
   mounted() {
-    this.getFilms();
+    this.getFilms('');
   },
 
   methods: {
