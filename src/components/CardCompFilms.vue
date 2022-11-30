@@ -10,12 +10,12 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">{{ cardProps.title }}</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+            <h4 class="card-title">{{ cardProps.title }}</h4>
+            <h5>{{ cardProps.original_title }}</h5>
+            <p class="card-text text-uppercase">
+              {{ cardProps.original_language }}
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p><span>Views: </span>{{ cardProps.popularity }}</p>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: "CardComp",
+  name: "CardCompFilms",
   props: {
     cardProps: Object,
   },

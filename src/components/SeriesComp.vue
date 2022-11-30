@@ -1,9 +1,20 @@
 <template>
-  <div></div>
+  <div>
+    <CardCompSeries
+      v-for="(element, index) in secpropsSerie"
+      :key="index"
+      :cardProps="element"
+    />
+  </div>
 </template>
 
 <script>
+import CardCompSeries from "./CardCompSeries.vue";
 export default {
+  name: "SeriesComp",
+  components: {
+    CardCompSeries,
+  },
   props: {
     secpropsSerie: Array,
   },
