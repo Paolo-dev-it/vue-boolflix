@@ -7,8 +7,10 @@
             <div class="frontside">
               <div class="card ">
                 <div class="card-body p-0 b-0 m-0 text-left">
-                  <img class="background img-fluid" :src="`http://image.tmdb.org/t/p/w342/${cardProps.backdrop_path}`"
-                    alt="Image not available">
+                  <img v-if="cardProps.backdrop_path" class="background img-fluid"
+                    :src="`http://image.tmdb.org/t/p/w342/${cardProps.backdrop_path}`" alt="...">
+                  <img v-else src="https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png"
+                    class="background img-fluid" alt="">
                   <h5 class="card-title p-2">{{ cardProps.title }}</h5>
                   <div class="p-2">
                     <span>Lingua: </span>
