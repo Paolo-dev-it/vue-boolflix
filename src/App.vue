@@ -61,7 +61,7 @@ export default {
 }
 
 #app {
-  background-color: black;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(53, 10, 3));
   height: 100vh;
   overflow: auto;
 }
