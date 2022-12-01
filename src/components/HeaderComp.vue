@@ -21,8 +21,9 @@
             </li>
           </ul>
           <div class="input-group mb-3 mt-3 w-25">
-            <input type="text" class="form-control" v-model="testoInput" @keyup.enter="$emit('nomeEmit', testoInput)"
-              placeholder="Search" aria-label="Example text with button addon" aria-describedby="button-addon1" />
+            <input type="text" class="form-control aaa" v-model="testoInput"
+              @keyup.enter="$emit('nomeEmit', testoInput)" placeholder="Search"
+              aria-label="Example text with button addon" aria-describedby="button-addon1" />
             <button class="btn btn-outline-light" @click="$emit('nomeEmit', testoInput)" type="button"
               id="button-addon1">
               <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
@@ -31,32 +32,6 @@
         </div>
       </div>
     </nav>
-    <!-- <input
-      type="text"
-      placeholder="Search"
-      v-model="testoInput"
-      @keyup.enter="$emit('nomeEmit', testoInput)"
-    />
-    <button @click="$emit('nomeEmit', testoInput)">Search</button> -->
-    <!-- <div class="input-group mb-3 mt-3 w-50">
-      <input
-        type="text"
-        class="form-control"
-        v-model="testoInput"
-        @keyup.enter="$emit('nomeEmit', testoInput)"
-        placeholder="Search"
-        aria-label="Example text with button addon"
-        aria-describedby="button-addon1"
-      />
-      <button
-        class="btn btn-outline-secondary"
-        @click="$emit('nomeEmit', testoInput)"
-        type="button"
-        id="button-addon1"
-      >
-        Search
-      </button>
-    </div> -->
   </div>
 </template>
 
@@ -83,7 +58,5 @@ export default {
 
 .img {
   width: 100px;
-
-
 }
 </style>

@@ -11,7 +11,7 @@
                                         :src="`http://image.tmdb.org/t/p/w342/${cardProps.backdrop_path}`" alt="...">
                                     <img v-else
                                         src="https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png"
-                                        class="background img-fluid" alt="">
+                                        class="background img-fluid img-not" alt="">
                                     <h5 class="card-title p-2">{{ cardProps.name }}</h5>
                                     <div class="p-2">
                                         <span>Lingua: </span>
@@ -58,6 +58,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.img-not {
+    max-height: 170px;
+}
+
 .img-def {
     width: 20px;
     height: 15px;
